@@ -41,5 +41,5 @@ plt.tick_params(axis='both', which='major', labelsize=10, labelbottom = True,
                 bottom=False, top = False, left = False, labeltop=False)
 plt.style.use("seaborn-dark")
 
-p = seaborn.scatterplot(x = "longitudes", y = "latitudes", hue = "log(duration)", data = df, palette="rocket", size = "log(duration)", alpha = 0.75)
-p.get_figure().savefig("test_us16.png",bbox_inches='tight',transparent=False)
+p = seaborn.scatterplot(x = "longitudes", y = "latitudes", hue = "log(duration)", data = df, palette="rocket", size = "log(duration)", alpha = 0.5, linewidth = 0)
+p.get_figure().savefig("final_us.png",bbox_inches='tight',transparent=False)
