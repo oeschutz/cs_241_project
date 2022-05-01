@@ -1,7 +1,4 @@
-# NOTE TO SELF: RUN WITH CONDA
-
-#notes: removed ufo sightings with durations longer than 5 hours and shorter than 5 seconds. 
-
+#notes: removed ufo sightings with durations longer than 5 hours and shorter than 5 seconds from the csv. 
 
 from math import log
 
@@ -21,7 +18,7 @@ def csv_to_dict(file): # read csv into dictionary
                 elif commas == 10:
                     lon += c
             lat, lon, dur = float(lat), float(lon), log(float(dur))
-            if -125 < lon < -67 and 25 < lat < 49: # filter by contguous US latitude/longitude
+            if -125 < lon < -67 and 25 < lat < 49: # filter by contiguous US latitude/longitude
                 durs.append(dur)
                 lats.append(lat)
                 longs.append(lon)
